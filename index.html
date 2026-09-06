@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zamorin Digital — Premium Web Studio, Perinthalmanna</title>
+<meta name="description" content="Handcrafted, AI-powered web platforms for every industry. Zamorin Digital — premium web studio in Perinthalmanna, Kerala. Working worldwide.">
+<link id="fav" rel="icon" type="image/png" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Manrope:wght@300..800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{colors:{forest:'#0B3D2E',deep:'#07271d',cream:'#FAF7F0',gold:'#C9A227',goldLight:'#E3C458',goldDeep:'#A8861B'},fontFamily:{disp:['Fraunces','Georgia','serif'],body:['Manrope','system-ui','sans-serif']},boxShadow:{glow:'0 0 70px -12px rgba(201,162,39,.5)'}}}}</script>
+<style>
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{background:#FAF7F0;color:#0B3D2E;overflow-x:hidden}
+::selection{background:#C9A227;color:#07271d}
+::-webkit-scrollbar{width:11px}
+::-webkit-scrollbar-track{background:#0B3D2E}
+::-webkit-scrollbar-thumb{background:linear-gradient(#E3C458,#A8861B);border-radius:8px;border:2px solid #0B3D2E}
+#grain{position:fixed;inset:0;z-index:80;pointer-events:none;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:180px}
+#nav{background:rgba(11,61,46,.55);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid rgba(201,162,39,.14);transition:background .3s,box-shadow .3s}
+#nav.navsc{background:rgba(7,32,24,.9);box-shadow:0 12px 40px -18px rgba(0,0,0,.65)}
+.nlink{position:relative;color:rgba(250,247,240,.85);font-size:.9rem;font-weight:500;letter-spacing:.04em;transition:color .25s}
+.nlink::after{content:'';position:absolute;left:0;bottom:-5px;height:1px;width:0;background:#C9A227;transition:width .3s}
+.nlink:hover{color:#FAF7F0}.nlink:hover::after{width:100%}
+.eyebrow{display:flex;align-items:center;justify-content:center;gap:1.1rem;text-transform:uppercase;letter-spacing:.3em;color:#C9A227;font-size:.68rem;font-weight:700}
+.eyebrow::before,.eyebrow::after{content:'';height:1px;width:2.6rem;flex:none}
+.eyebrow::before{background:linear-gradient(90deg,transparent,#C9A227)}
+.eyebrow::after{background:linear-gradient(90deg,#C9A227,transparent)}
+.eyebrow-l{justify-content:flex-start}.eyebrow-l::before{display:none}
+.btn-gold{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;background:linear-gradient(135deg,#E3C458,#C9A227 50%,#A8861B);color:#07271d;font-weight:700;padding:.95rem 2rem;border-radius:9999px;transition:transform .3s,box-shadow .3s;box-shadow:0 12px 32px -14px rgba(201,162,39,.65)}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 20px 44px -14px rgba(201,162,39,.8)}
+.btn-line{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;border:1px solid rgba(201,162,39,.55);color:#FAF7F0;font-weight:600;padding:.95rem 2rem;border-radius:9999px;transition:transform .3s,background .3s,border-color .3s}
+.btn-line:hover{transform:translateY(-3px);background:rgba(201,162,39,.12);border-color:#C9A227}
+.chip{display:inline-flex;align-items:center;gap:.55rem;border:1px solid rgba(201,162,39,.35);border-radius:9999px;padding:.45rem 1.1rem;font-size:.8rem;color:rgba(250,247,240,.85);background:rgba(255,255,255,.04)}
+.chip::before{content:'';width:6px;height:6px;border-radius:50%;background:#C9A227;box-shadow:0 0 9px #C9A227}
+.glow{position:absolute;pointer-events:none;border-radius:50%;background:radial-gradient(circle,rgba(201,162,39,.2),transparent 65%);filter:blur(32px)}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .8s cubic-bezier(.22,1,.36,1);transition-delay:var(--d,0ms)}
+.rv.on{opacity:1;transform:none}
+.lift{transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s ease,border-color .35s ease}
+.lift:hover{transform:translateY(-6px);box-shadow:0 26px 50px -22px rgba(7,39,29,.42)}
+.tilt{transform-style:preserve-3d;will-change:transform}
+.shine{position:absolute;inset:0;z-index:20;pointer-events:none;border-radius:inherit;opacity:0;transition:opacity .4s;background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(201,162,39,.3),transparent 55%)}
+.tilt:hover .shine{opacity:1}
+#mq{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.mq-track{display:flex;width:max-content;animation:mq 34s linear infinite}
+#mq:hover .mq-track{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(-50%)}}
+.floaty{animation:float 6.5s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+.pill{border:1px solid rgba(11,61,46,.22);color:rgba(11,61,46,.7);padding:.5rem 1.35rem;border-radius:9999px;font-size:.85rem;font-weight:600;transition:.25s}
+.pill:hover{border-color:#C9A227;color:#0B3D2E}
+.pill.on{background:linear-gradient(135deg,#E3C458,#A8861B);color:#07271d;border-color:transparent;box-shadow:0 10px 22px -10px rgba(201,162,39,.75)}
+.inp{width:100%;border:1px solid rgba(11,61,46,.18);background:#fff;border-radius:.9rem;padding:.85rem 1.1rem;font-size:.95rem;color:#0B3D2E;transition:.25s;outline:none}
+.inp:focus{border-color:#C9A227;box-shadow:0 0 0 3px rgba(201,162,39,.18)}
+.lbl{display:block;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(11,61,46,.55);font-weight:700;margin-bottom:.45rem}
+#toast{position:fixed;left:50%;bottom:26px;z-index:120;transform:translate(-50%,14px);opacity:0;pointer-events:none;transition:.35s;background:rgba(7,39,29,.95);border:1px solid rgba(201,162,39,.55);color:#FAF7F0;padding:.8rem 1.8rem;border-radius:9999px;font-size:.9rem;box-shadow:0 18px 40px -12px rgba(0,0,0,.5);backdrop-filter:blur(8px)}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+</style>
+</head>
+<body id="top" class="font-body antialiased">
+<div id="grain"></div>
+<header id="nav" class="fixed inset-x-0 top-0 z-50">
+<div class="max-w-7xl mx-auto px-5 h-20 flex items-center justify-between gap-6">
+<a href="#top" data-logo class="flex items-center shrink-0"></a>
+<nav class="hidden lg:flex items-center gap-9"><a class="nlink" href="#services">Services</a><a class="nlink" href="#industries">Industries</a><a class="nlink" href="#work">Work</a><a class="nlink" href="#process">Process</a><a class="nlink" href="#about">About</a></nav>
+<div class="flex items-center gap-4">
+<a href="#contact" class="btn-gold hidden sm:inline-flex !px-6 !py-2.5 text-sm">Start a Project</a>
+<button id="burger" class="lg:hidden text-cream p-2" aria-label="Menu"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C9A227" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</div>
+</div>
+<div id="mMenu" class="hidden lg:hidden px-6 pb-6 flex flex-col gap-1">
+<a href="#services" class="text-cream/90 py-3 border-b border-white/10">Services</a>
+<a href="#industries" class="text-cream/90 py-3 border-b border-white/10">Industries</a>
+<a href="#work" class="text-cream/90 py-3 border-b border-white/10">Work</a>
+<a href="#process" class="text-cream/90 py-3 border-b border-white/10">Process</a>
+<a href="#about" class="text-cream/90 py-3 border-b border-white/10">About</a>
+<a href="#contact" class="btn-gold mt-4 text-sm">Start a Project</a>
+</div>
+</header>
+<section class="relative overflow-hidden bg-gradient-to-b from-forest to-deep pt-36 pb-0">
+<div class="glow" style="width:560px;height:560px;top:-180px;right:-140px"></div>
+<div class="glow" style="width:420px;height:420px;bottom:120px;left:-160px"></div>
+<div class="max-w-7xl mx-auto px-5 pb-16">
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+<div id="heroTxt" class="order-1 lg:order-2 space-y-7">
+<div class="eyebrow eyebrow-l rv">A Premium Web Studio &bull; Est. Perinthalmanna</div>
+<h1 class="rv font-disp font-medium text-cream text-5xl md:text-6xl xl:text-7xl leading-[1.04]" style="--d:90ms">Websites that work <span class="italic text-gold">as hard</span> as you do.</h1>
+<p class="rv text-cream/75 text-lg leading-relaxed max-w-xl" style="--d:180ms">Handcrafted, AI-powered web platforms for every industry that takes its online presence seriously. No templates. No shortcuts. Just code that performs.</p>
+<div class="rv flex flex-wrap gap-4 pt-1" style="--d:270ms">
+<a href="#work" class="btn-gold">View Our Work</a>
+<a href="#contact" class="btn-line">Start a Project</a>
+</div>
+<div class="rv flex flex-wrap gap-3 pt-2" style="--d:360ms">
+<span class="chip">Fast Loading</span><span class="chip">AI-Powered</span><span class="chip">Multi-Language</span><span class="chip">Zero Hosting Cost</span>
+</div>
+</div>
+<div id="heroWrap" class="order-2 lg:order-1 rv" style="--d:300ms">
+<div class="floaty relative">
+<div class="absolute -inset-6 rounded-full bg-gold/15 blur-3xl"></div>
+<div class="relative aspect-video rounded-2xl border border-gold/40 shadow-glow overflow-hidden bg-deep">
+<img src="hero.jpg" alt="Zamorin Digital showcase" class="w-full h-full object-cover">
+<div class="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-inset ring-white/10"></div>
+</div>
+<div class="absolute -top-3 -left-3 w-10 h-10 border-t border-l border-gold"></div>
+<div class="absolute -bottom-3 -right-3 w-10 h-10 border-b border-r border-gold"></div>
+</div>
+</div>
+</div>
+</div>
+<div id="mq" class="relative border-y border-gold/15 bg-deep/60 py-5"><div id="mqTrack" class="mq-track"></div></div>
+<p class="rv text-center font-disp italic text-cream/55 text-lg px-5 py-12">One studio. Every industry. The niche changes — the craft doesn't.</p>
+</section>
+<section id="services" class="relative py-24 md:py-28 overflow-hidden">
+<div class="max-w-7xl mx-auto px-5">
+<div class="text-center max-w-3xl mx-auto rv">
+<div class="eyebrow">Capabilities</div>
+<h2 class="font-disp text-4xl md:text-5xl mt-6 leading-tight">Full-stack. End to end. One developer.</h2>
+</div>
+<div id="capGrid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14"></div>
+</div>
+</section>
+<section id="industries" class="relative overflow-hidden py-24 md:py-28 bg-gradient-to-b from-forest to-deep">
+<div class="glow" style="width:520px;height:520px;top:-160px;left:-140px"></div>
+<div class="glow" style="width:440px;height:440px;bottom:-120px;right:-120px"></div>
+<div class="max-w-7xl mx-auto px-5 relative">
+<div class="text-center max-w-3xl mx-auto rv">
+<div class="eyebrow">Industries We Serve</div>
+<h2 class="font-disp text-cream text-4xl md:text-5xl mt-6 leading-tight">Every business deserves a website that delivers.</h2>
+</div>
+<div id="indGrid" class="grid lg:grid-cols-2 gap-x-14 mt-14"></div>
+<div class="rv mt-12 rounded-2xl border border-gold/30 bg-gradient-to-r from-gold/10 via-transparent to-gold/10 p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="text-center md:text-left">
+<h3 class="font-disp text-2xl md:text-3xl text-cream">Your industry not listed?</h3>
+<p class="text-cream/70 mt-2">Tell us what you do — we'll build it custom.</p>
+</div>
+<a href="#contact" class="btn-gold shrink-0">Start a Project</a>
+</div>
+</div>
+</section>
+<section id="work" class="relative py-24 md:py-28 overflow-hidden">
+<div class="max-w-7xl mx-auto px-5">
+<div class="text-center max-w-3xl mx-auto rv">
+<div class="eyebrow">Recent Work</div>
+<h2 class="font-disp text-4xl md:text-5xl mt-6 leading-tight">Live, production websites — explore them yourself.</h2>
+</div>
+<div id="pills" class="rv flex flex-wrap justify-center gap-3 mt-10">
+<button class="pill on" data-f="">All</button><button class="pill" data-f="finance">Finance</button><button class="pill" data-f="weddings">Weddings</button><button class="pill" data-f="healthcare">Healthcare</button><button class="pill" data-f="hospitality">Hospitality</button><button class="pill" data-f="ecommerce">E-commerce</button>
+</div>
+<div id="workGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-7 mt-12"></div>
+</div>
+</section>
+<section class="relative overflow-hidden py-20 bg-gradient-to-b from-deep to-forest">
+<div class="glow" style="width:420px;height:420px;top:-140px;right:-100px"></div>
+<div class="max-w-5xl mx-auto px-5 text-center">
+<div class="rv"><div class="eyebrow">Our Stack</div>
+<h2 class="font-disp text-cream text-3xl md:text-4xl mt-6">Modern tools. Proven results.</h2></div>
+<div id="techRow" class="flex flex-wrap justify-center gap-3 mt-10"></div>
+</div>
+</section>
+<section id="process" class="relative py-24 md:py-28 overflow-hidden">
+<div class="max-w-7xl mx-auto px-5">
+<div class="text-center max-w-3xl mx-auto rv">
+<div class="eyebrow">How We Work</div>
+<h2 class="font-disp text-4xl md:text-5xl mt-6 leading-tight">Calm, clear, collaborative.</h2>
+</div>
+<div id="procGrid" class="grid md:grid-cols-3 lg:grid-cols-5 gap-6 mt-14"></div>
+</div>
+</section>
+<section id="about" class="relative overflow-hidden py-24 md:py-32 bg-gradient-to-b from-forest to-deep">
+<div class="glow" style="width:500px;height:500px;top:-140px;left:-140px"></div>
+<div class="max-w-7xl mx-auto px-5 grid lg:grid-cols-2 gap-16 items-center relative">
+<div class="rv relative max-w-md w-full mx-auto lg:mx-0">
+<div class="absolute -inset-3 rounded-[22px] border border-gold/25 -rotate-1 pointer-events-none"></div>
+<div id="founderBox" class="relative aspect-[4/5] rounded-2xl overflow-hidden border border-gold/50 shadow-glow bg-gradient-to-br from-forest to-deep">
+<div class="absolute inset-0 flex items-center justify-center"><span class="font-disp italic text-9xl text-gold/25">Z</span></div>
+<img src="founder.jpg" alt="Founder, Zamorin Digital" loading="lazy" class="absolute inset-0 w-full h-full object-cover" onerror="this.remove()">
+</div>
+<div class="absolute -bottom-5 left-1/2 -translate-x-1/2 whitespace-nowrap bg-deep border border-gold/40 rounded-full px-6 py-2.5 text-[11px] tracking-[.25em] uppercase text-gold font-bold shadow-lg">Founder &bull; Zamorin Digital</div>
+</div>
+<div>
+<div class="eyebrow eyebrow-l rv">The Studio</div>
+<h2 class="rv font-disp text-cream text-4xl md:text-5xl mt-6 leading-tight" style="--d:80ms">Small studio. Serious craft.</h2>
+<div class="rv space-y-5 text-cream/70 leading-relaxed mt-7" style="--d:160ms">
+<p>Zamorin Digital is a single-developer web studio in Perinthalmanna, Kerala — built on a simple belief: a website should work as hard as the person behind it.</p>
+<p>No account managers, no outsourced teams, no assembly lines. One developer who designs, codes, deploys and supports every project personally. From AI-powered platforms to boutique wedding sites, everything that leaves this studio is handcrafted, performance-tuned and built to last.</p>
+</div>
+<div id="valGrid" class="grid sm:grid-cols-2 gap-4 mt-9"></div>
+</div>
+</div>
+</section>
+<section id="contact" class="relative py-24 md:py-28 overflow-hidden">
+<div class="max-w-7xl mx-auto px-5">
+<div class="text-center max-w-3xl mx-auto rv">
+<div class="eyebrow">Get In Touch</div>
+<h2 class="font-disp text-4xl md:text-5xl mt-6 leading-tight">Let's build something worth building.</h2>
+</div>
+<div class="grid lg:grid-cols-5 gap-8 mt-14">
+<form id="cForm" class="rv lg:col-span-3 bg-white rounded-2xl border border-forest/10 shadow-lg p-7 md:p-9">
+<div class="grid sm:grid-cols-2 gap-5">
+<div><label class="lbl" for="fName">Your Name</label><input id="fName" class="inp" required placeholder="Full name"></div>
+<div><label class="lbl" for="fEmail">Email</label><input id="fEmail" type="email" class="inp" required placeholder="you@business.com"></div>
+<div><label class="lbl" for="fPhone">Phone / WhatsApp</label><input id="fPhone" class="inp" placeholder="+91 ..."></div>
+<div><label class="lbl" for="fInd">Industry</label>
+<select id="fInd" class="inp"><option>Other</option><option>E-commerce &amp; Retail</option><option>Healthcare</option><option>Real Estate</option><option>Restaurant / Café</option><option>Hotel / Hospitality</option><option>Wedding / Events</option><option>Education</option><option>Finance</option><option>Professional Services</option><option>Beauty / Wellness</option><option>Travel</option><option>Construction</option></select></div>
+<div class="sm:col-span-2"><label class="lbl" for="fMsg">Project Details</label><textarea id="fMsg" class="inp min-h-[130px]" required placeholder="Tell me about your business and what you need..."></textarea></div>
+</div>
+<button id="cSend" type="submit" class="btn-gold w-full mt-6">Send Message</button>
+<p class="text-center text-xs text-forest/50 mt-4">Submitting opens WhatsApp so we can reply fast — usually within 24 hours.</p>
+</form>
+<div class="lg:col-span-2 flex flex-col gap-5">
+<a href="mailto:ismayil.zamorindigital@gmail.com" class="rv lift block rounded-2xl border border-forest/10 bg-white p-7" style="--d:80ms">
+<div class="text-[11px] tracking-[.25em] uppercase text-gold font-bold">Email</div>
+<div class="mt-2 font-semibold break-all text-forest">ismayil.zamorindigital@gmail.com</div>
+<div class="text-sm text-forest/55 mt-1">Direct line to the developer — no middlemen.</div>
+</a>
+<a href="https://wa.me/918078903659" target="_blank" rel="noopener" class="rv lift block rounded-2xl border border-forest/10 bg-white p-7" style="--d:160ms">
+<div class="text-[11px] tracking-[.25em] uppercase text-gold font-bold">WhatsApp</div>
+<div class="mt-2 font-semibold text-forest">+91 80789 03659</div>
+<div class="text-sm text-forest/55 mt-1">The fastest way to start the conversation.</div>
+</a>
+<div class="rv lift rounded-2xl border border-gold/30 bg-gradient-to-br from-forest to-deep p-7" style="--d:240ms">
+<div class="text-[11px] tracking-[.25em] uppercase text-gold font-bold">Studio</div>
+<div class="mt-2 font-semibold text-cream">Perinthalmanna, Kerala</div>
+<div class="text-sm text-cream/60 mt-1">Working worldwide — every timezone welcome.</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="relative overflow-hidden bg-[#04201600] bg-gradient-to-b from-deep to-[#041a12] pt-16 pb-10 text-center">
+<div class="max-w-4xl mx-auto px-5">
+<a href="#top" data-logo class="inline-flex items-center"></a>
+<div class="mt-7 h-px w-40 mx-auto bg-gradient-to-r from-transparent via-gold to-transparent"></div>
+<p class="mt-7 text-cream/60 text-sm tracking-wide">ZAMORIN DIGITAL <span class="text-gold">&bull;</span> Perinthalmanna, Kerala <span class="text-gold">&bull;</span> Working worldwide <span class="text-gold">&bull;</span> &copy; 2026</p>
+</div>
+</footer>
+<div id="toast">Message saved</div>
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const LOGO_SRC='logo.png';
+const SUPABASE_URL='https://baabkhsgidzelistjler.supabase.co';
+const SUPABASE_ANON_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJhYWJraHNnaWR6ZWxpc3RqbGVyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg2NTIyMjAsImV4cCI6MjEwNDIyODIyMH0.e1eGQWaZwFatVFk6otXP1qfGagJNxjeAxn65a-aFtPU';
+let sb=null;try{if(window.supabase&&window.supabase.createClient)sb=window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY)}catch(e){}
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const ZSVG='<svg viewBox="0 0 40 40" class="w-9 h-9 shrink-0" aria-hidden="true"><rect x="7.5" y="7.5" width="25" height="25" rx="5" transform="rotate(45 20 20)" fill="none" stroke="#C9A227" stroke-width="1.6"/><text x="20" y="26.5" text-anchor="middle" font-family="Fraunces,serif" font-style="italic" font-size="17" fill="#C9A227">Z</text></svg>';
+const LOGO_FB='<span class="flex items-center gap-2">'+ZSVG+'<span class="font-disp tracking-[.2em] text-cream text-sm whitespace-nowrap">ZAMORIN <span class="text-gold">DIGITAL</span></span></span>';
+function mountLogo(el,src){el.innerHTML='<img src="'+esc(src)+'" alt="Zamorin Digital" class="h-10 w-auto block object-contain" onerror="logoFail(this)">'}
+function logoFail(im){const h=im.closest('[data-logo]');if(h)h.innerHTML=LOGO_FB}
+function setLogo(src){if(!src)return;$$('[data-logo]').forEach(el=>mountLogo(el,src))}
+$$('[data-logo]').forEach(el=>mountLogo(el,LOGO_SRC));
+(()=>{const l=$('#fav'),t=new Image();t.onerror=()=>{l.href='data:image/svg+xml;utf8,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><rect x="7.5" y="7.5" width="25" height="25" rx="5" transform="rotate(45 20 20)" fill="#0B3D2E" stroke="#C9A227" stroke-width="1.6"/><text x="20" y="26.5" text-anchor="middle" font-family="serif" font-style="italic" font-size="17" fill="#C9A227">Z</text></svg>')};t.src=LOGO_SRC})();
+const CAPS=[
+['cap-webdev.jpg','Custom Web Development','Hand-coded, blazing-fast websites built to your exact brief — no page builders, no bloated themes, just clean durable code.'],
+['cap-ai.jpg','AI Integration','AI concierges, chat assistants, smart search and workflow automation woven directly into your platform.'],
+['cap-cms.jpg','Admin CMS','A private, easy admin dashboard where you update pages, prices, menus and posts yourself — no developer needed.'],
+['cap-ecom.jpg','E-commerce','Complete online stores with catalogues, carts, secure payments and order tracking engineered to convert.'],
+['cap-booking.jpg','Booking Systems','Appointment and reservation engines with live availability, automated reminders and calendar sync.'],
+['cap-dash.jpg','Dashboards','Real-time analytics and internal tools that turn raw data into clear decisions, on any screen.'],
+['cap-lang.jpg','Multi-language','Arabic, English, Malayalam and more — one codebase, every audience, with full RTL support built in.'],
+['cap-seo.jpg','SEO & Performance','Core Web Vitals in the green, structured data and search-ready architecture from day one.']];
+$('#capGrid').innerHTML=CAPS.map((c,i)=>'<div class="rv lift tilt relative rounded-2xl overflow-hidden bg-white border border-forest/10" style="--d:'+(i*70)+'ms"><div class="relative h-36 overflow-hidden bg-gradient-to-br from-forest to-deep"><div class="absolute inset-0 flex items-center justify-center opacity-25">'+ZSVG+'</div><img src="'+c[0]+'" alt="'+esc(c[1])+'" loading="lazy" class="absolute inset-0 w-full h-full object-cover" onerror="this.remove()"></div><div class="p-6"><h3 class="font-disp text-xl">'+c[1]+'</h3><p class="mt-2 text-sm text-forest/65 leading-relaxed">'+c[2]+'</p></div><span class="shine"></span></div>').join('');
+const INDS=[
+['ind-ecom.jpg','E-commerce & Retail','Stores that turn browsers into loyal buyers.'],
+['ind-health.jpg','Healthcare & Clinics','Trust-first sites with easy appointment booking.'],
+['ind-realestate.jpg','Real Estate & Property','Listings that sell the view before the visit.'],
+['ind-rest.jpg','Restaurants & Cafés','Menus, tables and flavours that book themselves.'],
+['ind-hotel.jpg','Hotels & Hospitality','Direct-booking sites that beat OTA commissions.'],
+['ind-wed.jpg','Weddings & Events','Elegant invitations with RSVP, galleries and countdowns.'],
+['ind-edu.jpg','Education & E-learning','Courses, admissions and portals students actually enjoy.'],
+['ind-fin.jpg','Finance & Fintech','Secure, credible platforms for serious money.'],
+['ind-pro.jpg','Professional Services','Authority sites for consultants, lawyers and agencies.'],
+['ind-beauty.jpg','Beauty Wellness & Fitness','Salons, spas and studios that fill their calendars.'],
+['ind-travel.jpg','Travel & Tourism','Itineraries and packages that spark wanderlust.'],
+['ind-build.jpg','Construction & Interiors','Portfolios that build trust before the first brick.']];
+const indRow=(d,i)=>'<div class="rv tilt group relative flex items-center gap-5 px-4 md:px-5 py-5 rounded-xl border-b border-forest/10 last:border-b-0 hover:bg-gold/[0.07] transition-colors duration-300" style="--d:'+(i*60)+'ms"><div class="w-16 h-16 shrink-0 rounded-full p-[2px] bg-gradient-to-br from-goldLight via-gold to-goldDeep transition-shadow duration-300 group-hover:shadow-[0_0_28px_-2px_rgba(201,162,39,.65)]"><div class="relative w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-forest to-deep flex items-center justify-center"><span class="font-disp italic text-xl text-gold/80">'+d[1][0]+'</span><img src="'+d[0]+'" alt="'+esc(d[1])+'" loading="lazy" class="absolute inset-0 w-full h-full object-cover" onerror="this.remove()"></div></div><div class="flex-1 min-w-0 transition-transform duration-300 group-hover:translate-x-1.5"><h3 class="font-disp text-lg md:text-xl text-cream leading-snug">'+d[1]+'</h3><p class="text-sm text-cream/60 mt-0.5 leading-relaxed">'+d[2]+'</p></div><svg class="w-7 shrink-0 text-gold opacity-0 -translate-x-3 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" viewBox="0 0 28 10" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 5h25M21 1.5 26 5l-5 3.5"/></svg><span class="shine"></span></div>';
+$('#indGrid').innerHTML='<div>'+INDS.slice(0,6).map((d,i)=>indRow(d,i)).join('')+'</div><div>'+INDS.slice(6).map((d,i)=>indRow(d,i+6)).join('')+'</div>';
+function bindTilt(root){root.querySelectorAll('.tilt:not([data-tw])').forEach(el=>{el.setAttribute('data-tw','1');
+const move=(cx,cy)=>{const r=el.getBoundingClientRect();const px=(cx-r.left)/r.width,py=(cy-r.top)/r.height;
+el.style.setProperty('--mx',(px*100).toFixed(2)+'%');el.style.setProperty('--my',(py*100).toFixed(2)+'%');
+el.style.transition='transform .08s linear,box-shadow .35s ease';
+el.style.transform='perspective(900px) rotateX('+((0.5-py)*5).toFixed(2)+'deg) rotateY('+((px-0.5)*6).toFixed(2)+'deg) translateY(-6px)';};
+el.addEventListener('mousemove',e=>move(e.clientX,e.clientY));
+el.addEventListener('touchstart',e=>{const t=e.touches[0];if(t)move(t.clientX,t.clientY)},{passive:true});
+const reset=()=>{el.style.transition='transform .55s cubic-bezier(.22,1,.36,1),box-shadow .35s ease';el.style.transform='';};
+el.addEventListener('mouseleave',reset);el.addEventListener('touchend',reset);})}
+bindTilt($('#capGrid'));bindTilt($('#indGrid'));
+const NLBL={finance:'Finance',weddings:'Weddings',healthcare:'Healthcare',hospitality:'Hospitality',ecommerce:'E-commerce'};
+let PROJECTS=[
+{name:'AL MISBAH',niche:'finance',description:'AI-powered Islamic finance advisor platform',url:'https://dr-ibrahim-al-mansouri.learnwithismayil.workers.dev'},
+{name:'Dr. Al Farsi Scholar',niche:'finance',description:'Islamic scholar platform',url:'https://dr-alfarsi-scholar.learnwithismayil.workers.dev'},
+{name:'Rose Pearl',niche:'weddings',description:'Luxury wedding website with live RSVP & AI concierge',url:'https://rose-pearl-wedding.learnwithismayil.workers.dev'},
+{name:'Amira Omar Wedding',niche:'weddings',description:'Custom invitation website',url:'https://amira-omar-wedding.learnwithismayil.workers.dev'},
+{name:'Layla Adam Wedding',niche:'weddings',description:'RSVP & gallery platform',url:'https://layla-adam-wedding.learnwithismayil.workers.dev'},
+{name:'Royal Wedding',niche:'weddings',description:'Premium wedding showcase',url:'https://royal-wedding-demo.learnwithismayil.workers.dev'},
+{name:'Smile Care',niche:'healthcare',description:'Hospital website, Perinthalmanna',url:'https://smilecareperinthalmanna.netlify.app'},
+{name:'Al Noor Hotel',niche:'hospitality',description:'Hotel website, Perinthalmanna',url:'https://alnoorperinthalmanna.netlify.app'},
+{name:'Al Oud Al Malabar',niche:'ecommerce',description:'Oud, attar & bakhoor store',url:'https://aloudalmalabar.netlify.app'},
+{name:'Zamorin Vault',niche:'ecommerce',description:'Spices, silk, brass & handicraft showcase',url:'https://zamorinvault.learnwithismayil.workers.dev'}];
+let curFilter='';
+function renderWork(){
+const list=PROJECTS.filter(p=>!curFilter||p.niche===curFilter);
+$('#workGrid').innerHTML=list.map((p,i)=>{
+const nm=esc(p.name),lbl=NLBL[p.niche]||(p.niche?p.niche[0].toUpperCase()+p.niche.slice(1):'Project');
+return '<a href="'+esc(p.url)+'" target="_blank" rel="noopener" class="rv group block rounded-2xl overflow-hidden bg-white border border-forest/10 lift" style="--d:'+((i%6)*70)+'ms"><div class="relative h-44 overflow-hidden bg-gradient-to-br from-forest to-deep"><div class="absolute inset-0 flex items-center justify-center"><span class="font-disp italic text-6xl text-gold/25">'+nm.charAt(0)+'</span></div>'+(p.img?'<img src="'+esc(p.img)+'" alt="" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110" onerror="this.remove()">':'')+'<span class="absolute top-3 left-3 z-10 text-[10px] tracking-[.25em] uppercase bg-deep/85 text-gold border border-gold/40 rounded-full px-3 py-1 backdrop-blur">'+esc(lbl)+'</span></div><div class="p-6"><h3 class="font-disp text-xl text-forest">'+nm+'</h3><p class="mt-2 text-sm text-forest/65 leading-relaxed">'+esc(p.description)+'</p><span class="mt-4 inline-flex items-center gap-2 text-sm font-bold text-goldDeep">Visit Live <span class="transition-transform duration-300 group-hover:translate-x-1.5">&rarr;</span></span></div></a>'}).join('');
+watch($('#workGrid'))}
+$('#pills').addEventListener('click',e=>{const b=e.target.closest('.pill');if(!b)return;$$('.pill').forEach(x=>x.classList.toggle('on',x===b));curFilter=b.dataset.f;renderWork()});
+let mqOverride=null;
+function renderMarquee(){
+const items=(mqOverride&&mqOverride.length)?mqOverride:PROJECTS.map(p=>p.name);
+const unit=items.map(n=>'<span class="flex items-center shrink-0"><span class="px-7 font-disp italic text-lg text-cream/65 whitespace-nowrap">'+esc(n)+'</span><span class="text-gold text-sm">&#10022;</span></span>').join('');
+$('#mqTrack').innerHTML=unit+unit}
+function setMarquee(v){if(!v)return;let arr=null;try{arr=JSON.parse(v)}catch(e){}if(!Array.isArray(arr))arr=String(v).split(/[|,;\n]+/);arr=arr.map(s=>String(s).trim()).filter(Boolean);if(arr.length){mqOverride=arr;renderMarquee()}}
+const TECH=['JavaScript ES2023','TypeScript','React','Vue.js','Next.js','Tailwind CSS','Node.js','Supabase','PostgreSQL','Cloudflare Workers','OpenAI API','Claude API','Stripe','Razorpay','WhatsApp Business API','Figma','Vite','GSAP'];
+$('#techRow').innerHTML=TECH.map((t,i)=>'<span class="rv inline-flex items-center gap-2.5 rounded-full border border-gold/30 bg-white/5 px-5 py-2.5 text-sm text-cream/85 hover:border-gold hover:text-gold transition cursor-default" style="--d:'+(i*40)+'ms"><span class="w-1.5 h-1.5 rounded-full bg-gold"></span>'+t+'</span>').join('');
+const PROC=[['Discover','A calm conversation about your goals, audience and market. Scope, timeline and success — defined before anything is built.'],['Design','Moodboards to polished mockups. You review and approve every screen while changes are still cheap.'],['Build','Hand-coded with modern tooling and tested on real devices. You get progress previews, not radio silence.'],['Deploy','Domain, SSL, hosting, analytics, launch checklist. Go-live day is quiet because everything was rehearsed.'],['Support','Care plans, updates and improvements. Your site keeps getting better long after launch day.']];
+$('#procGrid').innerHTML=PROC.map((p,i)=>'<div class="rv lift rounded-2xl border border-forest/10 bg-white p-6" style="--d:'+(i*90)+'ms"><div class="font-disp italic text-5xl text-gold/80">0'+(i+1)+'</div><h3 class="mt-4 font-disp text-xl">'+p[0]+'</h3><p class="mt-2 text-sm text-forest/65 leading-relaxed">'+p[1]+'</p></div>').join('');
+const VALS=[['Craft over volume','We take fewer projects so each one gets full attention. Quality is a schedule here, not a slogan.'],['Zero template policy','Nothing is recycled. Every layout, animation and line of code is written for your business alone.'],['Performance obsessed','Fast loads, clean code and Core Web Vitals in the green — measured, not promised.'],['Partners after launch','The relationship starts at launch, not ends. Updates, fixes and growth — handled.']];
+$('#valGrid').innerHTML=VALS.map((v,i)=>'<div class="rv lift rounded-2xl border border-gold/15 bg-white/[.05] p-5" style="--d:'+(i*80)+'ms"><h4 class="font-bold text-gold">'+v[0]+'</h4><p class="mt-1.5 text-sm text-cream/60 leading-relaxed">'+v[1]+'</p></div>').join('');
+const io=new IntersectionObserver(es=>{es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('on');io.unobserve(en.target)}})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+function watch(root){(root||document).querySelectorAll('.rv:not(.on)').forEach(el=>io.observe(el))}
+watch(document);renderWork();renderMarquee();
+function setFounder(src){if(!src)return;const b=$('#founderBox');if(!b)return;let im=b.querySelector('img');if(!im){im=document.createElement('img');im.className='absolute inset-0 w-full h-full object-cover';im.onerror=()=>im.remove();b.appendChild(im)}im.src=src}
+function norm(p){return{name:p.name||p.title||'Project',niche:String(p.niche||p.category||p.tag||'').toLowerCase(),description:p.description||p.desc||'',url:p.url||p.link||'#',img:p.img||p.image||''}}
+async function refresh(){
+if(!sb)return;
+try{const r=await sb.from('projects').select('*').order('sort_order',{ascending:true});
+if(r.data&&Array.isArray(r.data)&&r.data.length){PROJECTS=r.data.map(norm);renderWork();if(!mqOverride)renderMarquee()}}catch(e){}
+try{const s=await sb.from('settings').select('key,value');
+if(s.data&&Array.isArray(s.data)){s.data.forEach(row=>{const v=row&&row.value;if(!v)return;
+if(row.key==='logo_src')setLogo(v);
+else if(row.key==='founder_photo')setFounder(v);
+else if(row.key==='marquee_items')setMarquee(v)})}}catch(e){}}
+refresh();
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove('show'),2600)}
+$('#cForm').addEventListener('submit',async e=>{
+e.preventDefault();
+const btn=$('#cSend');btn.disabled=true;btn.textContent='Sending…';
+const d={name:$('#fName').value.trim(),email:$('#fEmail').value.trim(),phone:$('#fPhone').value.trim(),industry:$('#fInd').value,message:$('#fMsg').value.trim()};
+try{if(sb)await sb.from('enquiries').insert([d])}catch(err){}
+toast('Message saved');
+const txt='Hello Zamorin Digital! I am '+d.name+(d.industry&&d.industry!=='Other'?' ('+d.industry+')':'')+'.\n\n'+d.message+'\n\nEmail: '+d.email+(d.phone?'\nPhone: '+d.phone:'');
+window.open('https://wa.me/918078903659?text='+encodeURIComponent(txt),'_blank');
+e.target.reset();btn.disabled=false;btn.textContent='Send Message'});
+const nav=$('#nav');addEventListener('scroll',()=>nav.classList.toggle('navsc',scrollY>16),{passive:true});
+$('#burger').addEventListener('click',()=>$('#mMenu').classList.toggle('hidden'));
+$$('#mMenu a').forEach(a=>a.addEventListener('click',()=>$('#mMenu').classList.add('hidden')));
+</script>
+</body>
+</html>
